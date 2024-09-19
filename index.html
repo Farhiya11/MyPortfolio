@@ -123,7 +123,7 @@
 
         #gallery img {
             width: 100%;
-            height: auto;
+            height: 250px;
             border-radius: 15px;
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
@@ -134,39 +134,81 @@
         }
 
 
-        #projects {
-            background: #ffffff;
-            padding: 60px;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
+/* Existing styles */
+#projects {
+    background: #ffffff;
+    padding: 60px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
 
-        #projects ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
+#projects ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
-        #projects ul li {
-            background: #ecf0f1;
-            padding: 20px;
-            border-radius: 10px;
-            transition: background 0.3s ease;
-        }
+#projects ul li {
+    background: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
 
-        #projects ul li:hover {
-            background: #bdc3c7;
-        }
+#projects ul li:hover {
+    background: #c3c7bd;
+}
 
-        #projects ul li a {
-            text-decoration: none;
-            color: #34495e;
-            font-weight: 600;
-            font-size: 1.2em;
-        }
+#projects ul li a {
+    text-decoration: none;
+    color: #34495e;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+/* Competences section */
+.competences {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-left: 4px solid #ffffff37;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.competences h4 {
+    font-size: 1em;
+    color: #34495e;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.competence-container {
+    margin-top: 8px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Allows the badges to wrap if there are too many */
+}
+
+.competence-badge {
+    display: inline-block;
+    background-color: #27ae5f2d;
+    color: black;
+    padding: 8px 12px;
+    font-size: 0.9em;
+    border-radius: 15px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+.competence-badge:hover {
+    background-color: #0e3b20bc; /* Darken the badge on hover */
+}
+
 
         footer {
             text-align: center;
@@ -195,17 +237,22 @@
         <section id="about">
             <h2>About Me</h2>
             <img src="photos/Picture1.png" alt="Farhiya Yusuf">
-            <p>Hello! My name is Farhiya</p>
+            <p>
+                Bachelor of Engineering in Software Technology, University of Southern Denmark.
+                Strong foundation in backend development (Java) and web development (SQL).
+                Studied abroad in South Korea, specializing in 3D UI and learning Korean culture.
+                Intern at Spin Robotics, focusing on frontend systems (Vue.js).
+                Experienced in agile development and innovative frontend solutions.</p>
         </section>
 
         <!-- Gallery Section -->
         <section id="gallery">
             <h2>Gallery</h2>
             <div class="gallery-container">
-                <img src="image1.jpg" alt="Project 1">
-                <img src="image2.jpg" alt="Project 2">
-                <img src="image3.jpg" alt="Project 3">
-                <img src="image4.jpg" alt="Project 4">
+                <img src="photos/homepage.png" alt="Project 1" class="gallery-image">
+                <img src="photos/project2.png" alt="Project 2" class="gallery-image">
+                <!-- <img src="image3.jpg" alt="Project 3">
+                <img src="image4.jpg" alt="Project 4"> -->
             </div>
         </section>
         
@@ -214,11 +261,54 @@
         <section id="projects">
             <h2>Projects</h2>
             <ul>
-                <li><a href="https://github.com/Farhiya11/InteractiveLanguageGame" target="_blank">Korean Interactive Language Learning Application</a> Language learning game created using the unity game engine </li>
-                <li><a href="https://github.com/yourusername/project2" target="_blank">GUI for the DAPS</a> Implement components in the system to communicate with the different protocols, SOAP, REST and MQTT</li>
-                <li><a href="https://github.com/yourusername/project3" target="_blank">Optimization of Beer Production at Refslevbæk Bryghus A/S </a> Enhancing Efficiency, Reducing Costs, and Meeting Demand </li>
+                <li>
+                    <a href="https://github.com/Farhiya11/InteractiveLanguageGame" target="_blank">
+                        Korean Interactive Language Learning Application
+                    </a>
+                    <p>Language learning game created using the Unity game engine.</p>
+                    <div class="competences">
+                        <h4>Competences Used:</h4>
+                        <div class="competence-container">
+                            <span class="competence-badge">Unity</span>
+                            <span class="competence-badge">C#</span>
+                            <span class="competence-badge">Game Development</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="https://github.com/yourusername/project2" target="_blank">
+                        Interfacing With Production Line
+                    </a>
+                    <p>Implemented components to communicate with SOAP, REST, and MQTT protocols.</p>
+                    <div class="competences">
+                        <h4>Competences Used:</h4>
+                        <div class="competence-container">
+                            <span class="competence-badge">SOAP</span>
+                            <span class="competence-badge">REST</span>
+                            <span class="competence-badge">MQTT</span>
+                            <span class="competence-badge">OOP</span>
+                            <span class="competence-badge">Java</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="https://github.com/yourusername/project3" target="_blank">
+                        Optimization of Beer Production at Refslevbæk Bryghus A/S
+                    </a>
+                    <p>Enhancing efficiency by optimizing production processes.</p>
+                    <div class="competences">
+                        <h4>Competences Used:</h4>
+                        <div class="competence-container">
+                            <span class="competence-badge">Data Analysis</span>
+                            <span class="competence-badge">Optimization</span>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </section>
+        
+        
+        
     </div>
 
     <footer>
